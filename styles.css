@@ -1,0 +1,329 @@
+/* Week 3 CSS Basics Practice — shared stylesheet */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #f5f7fb;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #172554;
+}
+
+a {
+    color: #2563eb;
+}
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #172554;
+    color: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.site-header h1 {
+    color: white;
+    margin-top: 0;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.site-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.exercise-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.exercise-links a, .level-card {
+    display: block;
+    padding: 16px;
+    background: white;
+    border: 1px solid #dbe3f0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.exercise-links a:hover {
+    background: #eaf1ff;
+}
+
+.blue-text {
+    color: blue;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.box-model-demo {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+    background: white;
+}
+
+.hex-color {
+    color: #ff5733;
+}
+
+.rgb-color {
+    color: rgb(0, 128, 255);
+}
+
+.hsl-color {
+    color: hsl(120, 60%, 40%);
+}
+
+.nav-link {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.profile-card {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background: white;
+}
+
+.flex-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    background: #333;
+}
+
+.flex-navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.flex-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 10px;
+}
+
+.flex-grid .sidebar, .flex-grid .main-content {
+    padding: 20px;
+}
+
+.flex-grid .sidebar {
+    background: lightgray;
+}
+
+.flex-grid .main-content {
+    background: #e6f2ff;
+}
+
+.responsive-heading {
+    font-size: 40px;
+}
+
+.responsive-subheading {
+    font-size: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery-item {
+    flex: 0 0 calc(25% - 12px);
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #bfdbfe;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #172554;
+    color: white;
+    padding: 15px;
+    margin: -24px -24px 24px;
+}
+
+.sticky-header h1 {
+    color: white;
+    margin: 0 0 8px;
+}
+
+.sticky-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.sticky-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.animated-button {
+    background: blue;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.animated-button:hover {
+    background: red;
+    transform: translateY(-3px);
+}
+
+.landing-page {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    gap: 10px;
+}
+
+.landing-header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.landing-header h1 {
+    color: white;
+    margin: 0;
+}
+
+.landing-sidebar {
+    grid-area: sidebar;
+    background: #d1d5db;
+    padding: 20px;
+}
+
+.landing-content {
+    grid-area: content;
+    background: #dbeafe;
+    padding: 20px;
+}
+
+.landing-footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.landing-footer p {
+    margin: 0;
+}
+
+.responsive-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.responsive-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    background: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .responsive-heading {
+        font-size: 28px;
+    }
+
+    .responsive-subheading {
+        font-size: 20px;
+    }
+
+    .gallery-item {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    .landing-page {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+
+    .responsive-cards {
+        flex-direction: column;
+    }
+
+    .flex-grid {
+        grid-template-columns: 1fr;
+    }
+}
